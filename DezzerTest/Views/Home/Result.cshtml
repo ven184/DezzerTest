@@ -1,0 +1,20 @@
+﻿<div class="glass-card">
+    <div class="top-label">Твой результат</div>
+
+    <div class="decor-line"></div>
+
+    <p>Ты похожа на</p>
+
+    <div class="result-title">@ViewBag.Result</div>
+
+    <div class="decor-line"></div>
+
+    <p class="result-description">
+        @ViewBag.Description
+    </p>
+
+    <div class="result-actions">
+        <a asp-action="Test" class="gold-button">Пройти снова</a>
+        <a asp-action="Index" class="gold-button outline-button">На главную</a>
+    </div>
+</div>

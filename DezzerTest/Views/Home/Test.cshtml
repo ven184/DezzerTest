@@ -1,0 +1,115 @@
+﻿@model List<DezzerTest.Models.Question>
+
+<div class="quiz-page">
+
+    <div class="quiz-top">
+        <div class="quiz-counter">
+            Вопрос <span id="currentQuestion">1</span> из @Model.Count
+        </div>
+
+        <div class="quiz-progress">
+            <div class="quiz-progress-fill" id="progressFill"></div>
+        </div>
+    </div>
+
+    <form method="post" asp-action="Result" id="quizForm">
+
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <section class="question-slide @(i == 0 ? "active" : "")" data-question="@i">
+
+                <div class="question-panel">
+                    <div class="question-number">@(i + 1)</div>
+
+                    <h2 class="question-title">
+                        @Model[i].Text
+                    </h2>
+
+                    <div class="answers-list">
+                        @foreach (var answer in Model[i].Answers)
+                        {
+                            <label class="answer-option">
+                                <input type="radio" name="answers[@i]" value="@answer.Character" required />
+                                <span>@answer.Text</span>
+                            </label>
+                        }
+                    </div>
+
+                    <div class="question-actions">
+                        @if (i > 0)
+                        {
+                            <button type="button" class="silver-button secondary-button prev-btn">
+                                Назад
+                            </button>
+                        }
+
+                        @if (i < Model.Count - 1)
+                        {
+                            <button type="button" class="silver-button next-btn">
+                                Далее
+                            </button>
+                        }
+                        else
+                        {
+                            <button type="submit" class="silver-button">
+                                Узнать результат
+                            </button>
+                        }
+                    </div>
+                </div>
+
+            </section>
+        }
+
+    </form>
+
+</div>
+
+<script>
+    const slides = document.querySelectorAll('.question-slide');
+    const nextButtons = document.querySelectorAll('.next-btn');
+    const prevButtons = document.querySelectorAll('.prev-btn');
+    const currentQuestion = document.getElementById('currentQuestion');
+    const progressFill = document.getElementById('progressFill');
+
+    let currentIndex = 0;
+    const total = slides.length;
+
+    function showQuestion(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+
+        currentIndex = index;
+        currentQuestion.textContent = index + 1;
+
+        const progress = ((index + 1) / total) * 100;
+        progressFill.style.width = progress + '%';
+    }
+
+    nextButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const currentSlide = slides[currentIndex];
+            const selected = currentSlide.querySelector('input[type="radio"]:checked');
+
+            if (!selected) {
+                currentSlide.classList.add('shake');
+
+                setTimeout(() => {
+                    currentSlide.classList.remove('shake');
+                }, 400);
+
+                return;
+            }
+
+            showQuestion(currentIndex + 1);
+        });
+    });
+
+    prevButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            showQuestion(currentIndex - 1);
+        });
+    });
+
+    showQuestion(0);
+</script>

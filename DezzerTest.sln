@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37328.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizSite", "QuizSite\QuizSite.csproj", "{B93965B2-5CF0-4DAA-B440-33F1ED8EAA8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DezzerTest", "DezzerTest\DezzerTest.csproj", "{44754C18-47CA-F6D8-DF61-202321362581}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B93965B2-5CF0-4DAA-B440-33F1ED8EAA8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93965B2-5CF0-4DAA-B440-33F1ED8EAA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93965B2-5CF0-4DAA-B440-33F1ED8EAA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93965B2-5CF0-4DAA-B440-33F1ED8EAA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44754C18-47CA-F6D8-DF61-202321362581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44754C18-47CA-F6D8-DF61-202321362581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44754C18-47CA-F6D8-DF61-202321362581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44754C18-47CA-F6D8-DF61-202321362581}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {628F8127-95F6-47F2-B1EF-0A981410D36C}
+	EndGlobalSection
+EndGlobal
