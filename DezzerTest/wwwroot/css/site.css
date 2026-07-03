@@ -649,8 +649,11 @@ h1 {
         }
 
     .question-actions {
-        margin-top: 30px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
         gap: 12px;
+        margin-top: 30px;
     }
 
     .glass-card {
