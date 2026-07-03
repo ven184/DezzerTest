@@ -37,7 +37,7 @@ new Question
         new Answer { Text = "Библиотека с высокими стеллажами", Character = "Ася / Катарсис" },
         new Answer { Text = "Комната с гирляндами", Character = "Зуля / Zxeg" },
         new Answer { Text = "Комната с плотными шторами и тишиной", Character = "Милена / Иерархия" },
-        new Answer { Text = "Комната раядом с лесом", Character = "Хэс / Эремиция" },
+        new Answer { Text = "Комната рядом с лесом", Character = "Хэс / Эремиция" },
         new Answer { Text = "Комната с приглушённым светом и большой кроватью", Character = "Мира / Effórt" }
     }
 },
@@ -94,7 +94,7 @@ new Question
         new Answer { Text = "Роберт Локамп, книга Ремарка «Три товарища»", Character = "Хэс / Эремиция" },
         new Answer { Text = "Одержимым второстепенным персонажем", Character = "Ася / Катарсис" },
         new Answer { Text = "Хранителем древних знаний", Character = "Милена / Иерархия" },
-        new Answer { Text = "ХАцуми из новержского леса, книга Харуки Мураками", Character = "Динара / Diletant" }
+        new Answer { Text = "Хацуми из новержского леса, книга Харуки Мураками", Character = "Динара / Diletant" }
     }
 },
 
